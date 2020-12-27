@@ -1,0 +1,9 @@
+{
+  "start": "python app.py",
+  "dependencies": {
+    "python-shell": "^2.0.3",
+    "python": "^0.0.4",
+    "flask": "^0.2.10",
+    "jinja": "^0.13.4"
+  }
+}
