@@ -59,9 +59,11 @@
 	<header>
 		<div class="container">
 		<div id="brandname">
-			ML App
+<h1>
+  Gene function prediction results 
+      </h1>
 		</div>
-		<h2>Predicting Gene function</h2>
+
 		
 	</div>
 	</header>
@@ -70,14 +72,20 @@
 
 
 		
-	{% if prediction == 1%}
-	<h2 style="color:red;">Spam</h2>
-	{% elif prediction == 4%}
-	<h2 style="color:blue;">Not a Spam (It is a Ham)</h2>
-	{% if prediction == 2%}
-	<h2 style="color:green;">dam</h2>
-	{% elif prediction == 3%}
-	<h2 style="color:blue;">Not a jam (It is a Ham)</h2>
+{% if prediction == 0}
+	<h2 style="color:red;">G protein coupled receptors</h2>
+	{% elif prediction == 1}
+	<h2 style="color:blue;">Tyrosine kinase</h2>
+	{% if prediction == 2}
+	<h2 style="color:green;">Tyrosine phosphatase</h2>
+	{% elif prediction == 3}
+	<h2 style="color:blue;">Synthetase</h2>
+	{% elif prediction == 4}
+	<h2 style="color:blue;">Synthase</h2>
+	{% if prediction == 5}
+	<h2 style="color:green;">Ion channel</h2>
+	{% elif prediction == 6}
+	<h2 style="color:blue;">Transcription factor</h2>
 	{% endif %}
 
 	</div>
