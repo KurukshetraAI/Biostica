@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8" />
+  <head>
+    <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- add shortcut icon -->
@@ -27,37 +27,58 @@
     <!-- import the webpage's stylesheet -->
     <link rel="stylesheet" href="/style.css" />
 
-	<title>Biostica</title>
+    <style>
+      body {
+        font: 15px/1.5 Arial, Helvetica, sans-serif;
+        padding: 0px;
+        background-color: #1A1A1A;
+      }
 
-</head>
-<body>
+      .container {
+        text-align: center;
+        background-color: #333333;
+        color: #FFFFFF;
+        padding: 10px;
+        border-radius: 24px;
+      }
+      .ml-container {
+        text-align: center;
+        color: #FFFFFF;
+      }
 
-	<header>
-		<div class="container">
-		<div id="brandname">
-			Machine Learning App with Flask
-		</div>
-		<h2>Gene function detector</h2>
-		
-	</div>
-	</header>
+      img {
+        height: 10%;
+        width: auto;
+      }
+    </style>
 
-	<div class="ml-container">
+    <title>Biostica</title>
+  </head>
+  <body>
+    <header>
 
-		<form action="{{ url_for('predict')}}" method="POST">
-		<p>Enter Your Message Here</p>
-		<!-- <input type="text" name="comment"/> -->
-		<textarea name="message" rows="6" cols="50"></textarea>
-		<br/>
+      <div class="container">
+        <div id="brandname">
+              <img
+            src="https://cdn.glitch.com/f0be8c43-f4f9-4c1c-a333-481721562c6f%2FWhatsApp_Image_2020-12-26_at_16.07.37-removebg-preview.png?v=1609062474658"
+          />  
+          <h1>
+            Biostica
+          </h1>
+        </div>
+        <h2>Gene function predictor</h2>
+      </div>
+    </header>
 
-		<input type="submit" class="btn-info" value="predict">
-		
-	</form>
-		
-	</div>
+    <div class="ml-container">
+      <form action="{{ url_for('predict')}}" method="POST">
+        <p>Enter your DNA sequence here:</p>
+        <!-- <input type="text" name="comment"/> -->
+        <textarea name="message" rows="6" cols="50"></textarea>
+        <br />
 
-	
-	
-
-</body>
+        <input type="submit" class="btn-info" value="Predict" />
+      </form>
+    </div>
+  </body>
 </html>
