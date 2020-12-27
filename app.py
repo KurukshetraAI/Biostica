@@ -5,7 +5,6 @@ Created on Sun Dec 27 13:26:55 2020
 @author: deepe
 """
 
-import os
 from flask import Flask,render_template,url_for,request
 import pandas as pd 
 import pickle
