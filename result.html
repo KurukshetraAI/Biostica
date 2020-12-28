@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- add shortcut icon -->
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="https://cdn.glitch.com/f0be8c43-f4f9-4c1c-a333-481721562c6f%2FWhatsApp_Image_2020-12-26_at_16.07.37-removebg-preview.ico?v=1609060046627"
+      sizes="16x16"
+    />
+    <!-- add font -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Cookie"
+      rel="stylesheet"
+    />
+    <!--add javascript-->
+
+    <script async src="./index.js"></script>
+
+    <title>Biostica Results</title>
+    <!-- link for icons -->
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <style>
+      body {
+        font: 15px/1.5 Arial, Helvetica, sans-serif;
+        padding: 0px;
+        background-color: #1A1A1A;
+      }
+
+      .container {
+        text-align: center;
+        background-color: #333333;
+        color: #FFFFFF;
+        padding: 10px;
+        border-radius: 24px;
+      }
+      .results {
+        text-align: center;
+      }
+
+      img {
+        height: 10%;
+        width: auto;
+      }
+    </style>
+
+    <title>Biostica</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div id="brandname">
+          <h1>
+            Gene function prediction results
+          </h1>
+        </div>
+      </div>
+    </header>
+
+    <div class="results">
+      <p style="color:blue;font-size:20;text-align: center;">
+        <b>Results for Comment</b>
+      </p>
+      <div class="results">
+        {% if prediction == 0}
+        <h2 style="color:red;">G protein coupled receptors</h2>
+        {% elif prediction == 1}
+        <h2 style="color:blue;">Tyrosine kinase</h2>
+        {% if prediction == 2}
+        <h2 style="color:green;">Tyrosine phosphatase</h2>
+        {% elif prediction == 3}
+        <h2 style="color:blue;">Synthetase</h2>
+        {% elif prediction == 4}
+        <h2 style="color:blue;">Synthase</h2>
+        {% if prediction == 5}
+        <h2 style="color:green;">Ion channel</h2>
+        {% elif prediction == 6}
+        <h2 style="color:blue;">Transcription factor</h2>
+        {% endif %}
+      </div>
+    </div>
+  </body>
+</html>
