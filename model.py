@@ -62,7 +62,14 @@ classifier.score(X_test,y_test)
 filename= 'nlp_model.pkl'
 #dumping files 
 pickle.dump(classifier,open(filename,'wb'))
-
+# Gene Family                          Class label 
+# G protien coupled receptors             0
+# Tyrosine Kinase                         1
+# Tyrosine phosphatase                    2
+# Synthetase                              3
+# Synthase                                4
+# Ion channel                             5
+# Transciption Factor                     6 
 y_pred = classifier.predict(X_test)
 y_pred
 
